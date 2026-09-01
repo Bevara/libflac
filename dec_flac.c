@@ -321,7 +321,7 @@ GF_FilterRegister FLACDecoderRegister = {
 	.process = flacdec_process,
 };
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flacdec_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE flacdec_register(GF_FilterSession *session)
 {
 	return &FLACDecoderRegister;
 }
@@ -329,5 +329,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flacdec_register(GF_Filte
 #include "filter_register.h"
 __attribute__((constructor))
 void register_flacdec(void) {
-    gf_filter_auto_register("flacdec", dynCall_flacdec_register);
+    gf_filter_auto_register("flacdec", flacdec_register);
 }

@@ -199,7 +199,7 @@ GF_FilterRegister ReframeFlacRegister = {
 	.process = rfflac_process,
 	.process_event = rfflac_process_event};
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flac_reframe_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE flac_reframe_register(GF_FilterSession *session)
 {
 	return &ReframeFlacRegister;
 }
@@ -208,5 +208,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flac_reframe_register(GF_
 #include "filter_register.h"
 __attribute__((constructor))
 void register_flac_reframe(void) {
-    gf_filter_auto_register("flac_reframe", dynCall_flac_reframe_register);
+    gf_filter_auto_register("flac_reframe", flac_reframe_register);
 }
