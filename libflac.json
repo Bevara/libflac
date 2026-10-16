@@ -1,5 +1,6 @@
 {
     "name": "libflac",
+    "version": "1.0.1",
     "description": "FLAC audio decoder",
     "filters":["flacdec","rfflacm"],
     "help": "This filter decodes FLAC audio files using libFLAC.",
