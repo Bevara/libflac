@@ -2,20 +2,30 @@
     "name": "libflac",
     "version": "1.0.2",
     "description": "FLAC audio decoder",
-    "filters":["flacdec","rfflacm"],
+    "filters": [
+        "flacdec",
+        "rfflacm"
+    ],
     "help": "This filter decodes FLAC audio files using libFLAC.",
     "support": [
         "audio"
     ],
-    "sources":"https://bevara.ddns.net/sources/libflac.accessor",
-    "filter_source":{
-        "flacdec" : "dec_flac.c",
-        "rfflacm" : "reframe_flac.c"
+    "sources": "https://bevara.ddns.net/sources/libflac.accessor",
+    "filter_source": {
+        "flacdec": "dec_flac.c",
+        "rfflacm": "reframe_flac.c"
     },
-    "extension":{
-      "flac" : "audio"
+    "extension": {
+        "flac": "audio"
     },
-    "using": ["mm_solver_minimal_1.0.1", "mm_solver_1.0.1", "mm_solver_1.0.2", "mm_solver_1.0.3", "mm_solver_1.0.4"],
+    "using": [
+        "mm_solver_minimal_1.0.1",
+        "mm_solver_1.0.1",
+        "mm_solver_1.0.2",
+        "mm_solver_1.0.3",
+        "mm_solver_1.0.4",
+        "mm_solver_1.0.5"
+    ],
     "patents": {
         "status": "royalty-free",
         "note": "FLAC",
